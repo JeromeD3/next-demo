@@ -1,12 +1,12 @@
-import NextAuth, { NextAuthOptions } from "next-auth"
-import GithubProvider from 'next-auth/providers/github';
+import NextAuth, { NextAuthOptions } from 'next-auth'
+import GithubProvider from 'next-auth/providers/github'
 
 export const authOptions: NextAuthOptions = {
   session: {
-    strategy: "jwt",
+    strategy: 'jwt',
   },
   pages: {
-    signIn: "/auth/login",
+    signIn: '/auth/login',
     signOut: '/auth/logout',
   },
   providers: [
@@ -23,9 +23,9 @@ export const authOptions: NextAuthOptions = {
     // }),
   ],
   callbacks: {
-    session: async ({ session, token }) => {
-      return token
-    }
+    session: async ({ session }) => {
+      return session
+    },
   },
 }
 

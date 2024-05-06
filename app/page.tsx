@@ -11,7 +11,7 @@ export default async function Home() {
       <>
         Current User:
         {user?.name}
-        <Image src={user?.picture} alt={user?.name} width={100} height={100} className="rounded-full" />
+        <Image src={user?.image!} alt={user?.name!} width={100} height={100} className="rounded-full" />
       </>
       <UserAuthForm />
     </main>
